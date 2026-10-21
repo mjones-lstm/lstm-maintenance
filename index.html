@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheduled Maintenance | Liverpool School of Tropical Medicine</title>
+  <meta name="description" content="This website is down for maintenance at the moment. Please check back in a few minutes.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#F4F1DE">
+  <style>
+    :root {
+      --brand-black: #000000;
+      --brand-burgundy: #790033;
+      --brand-red: #DC002E;
+      --brand-sand: #F4F1DE;
+      --brand-sand-light: #FAF7E9;
+      --brand-white: #FFFFFF;
+
+      --colour-page: var(--brand-sand-light);
+      --colour-band: var(--brand-sand);
+      --colour-surface: var(--brand-white);
+      --colour-text: var(--brand-black);
+      --colour-text-muted: #4a473f;
+      --colour-accent: var(--brand-red);
+      --colour-accent-deep: var(--brand-burgundy);
+      --colour-inverse-text: var(--brand-sand);
+      --colour-rule: var(--brand-black);
+      --colour-rule-subtle: #cdc7ad;
+      --colour-focus: var(--brand-black);
+      --colour-focus-inverse: var(--brand-sand);
+
+      --font-sans: "Roobert", Arial, "Helvetica Neue", Helvetica, sans-serif;
+      --text-xs: .8125rem;
+      --text-sm: .9375rem;
+      --text-base: 1.0625rem;
+      --text-lead: clamp(1.1875rem, 1.05rem + .6vw, 1.5rem);
+      --text-h1: clamp(2.75rem, 1.9rem + 3.6vw, 5rem);
+      --text-display: clamp(3rem, 1.6rem + 6.5vw, 7rem);
+
+      --leading-tight: 1.02;
+      --leading-heading: 1.12;
+      --leading-body: 1.6;
+      --tracking-display: -.035em;
+      --tracking-heading: -.02em;
+      --tracking-eyebrow: .14em;
+
+      --weight-regular: 400;
+      --weight-medium: 500;
+      --weight-bold: 700;
+
+      --space-1: .25rem;
+      --space-2: .5rem;
+      --space-3: .75rem;
+      --space-4: 1rem;
+      --space-5: 1.5rem;
+      --space-6: 2rem;
+      --space-7: 3rem;
+      --space-8: 4rem;
+      --space-9: 6rem;
+
+      --measure: 68ch;
+      --page-max: 96rem;
+      --gutter: clamp(1rem, .5rem + 3vw, 3rem);
+
+      --rule-thin: 1px solid var(--colour-rule);
+      --rule-subtle: 1px solid var(--colour-rule-subtle);
+      --rule-accent: 2px solid var(--colour-accent);
+      --radius-pill: 999px;
+    }
+
+    @font-face {
+      font-family: Roobert;
+      src: url(https://brand.lstmed.ac.uk/fonts/Roobert-Regular.woff2) format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: Roobert;
+      src: url(https://brand.lstmed.ac.uk/fonts/Roobert-Bold.woff2) format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    *, :before, :after {
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      background: var(--colour-page);
+      color: var(--colour-text);
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      line-height: var(--leading-body);
+      overflow-wrap: break-word;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    img, svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    h1, h2, h3, h4 {
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-heading);
+      letter-spacing: var(--tracking-heading);
+      text-wrap: balance;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--colour-focus);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    .inverse :focus-visible {
+      outline-color: var(--colour-focus-inverse);
+    }
+
+    .eyebrow {
+      font-size: var(--text-xs);
+      font-weight: var(--weight-bold);
+      letter-spacing: var(--tracking-eyebrow);
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+
+    .lead {
+      font-size: var(--text-lead);
+      font-weight: var(--weight-bold);
+      letter-spacing: -.01em;
+      line-height: 1.35;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--page-max);
+      padding-inline: var(--gutter);
+      margin-inline: auto;
+    }
+
+    .button {
+      align-items: center;
+      gap: var(--space-2);
+      min-height: 44px;
+      padding: var(--space-2) var(--space-5);
+      border-radius: var(--radius-pill);
+      background: var(--colour-accent);
+      color: var(--brand-white);
+      font: inherit;
+      font-size: var(--text-sm);
+      font-weight: var(--weight-bold);
+      cursor: pointer;
+      border: 0;
+      text-decoration: none;
+      display: inline-flex;
+      transition: background-color .15s ease;
+    }
+
+    .button:hover {
+      background: var(--colour-accent-deep);
+    }
+
+    /* Header */
+    .site-header {
+      border-bottom: var(--rule-subtle);
+      background: var(--colour-band);
+    }
+
+    .site-header__inner {
+      align-items: center;
+      gap: var(--space-3) var(--space-6);
+      flex-wrap: wrap;
+      padding-block: 25px;
+      display: flex;
+    }
+
+    .site-header__home {
+      color: var(--colour-accent);
+      align-items: center;
+      gap: 26px;
+      margin-right: auto;
+      text-decoration: none;
+      display: flex;
+    }
+
+    .site-header__logo {
+      width: auto;
+      height: 28px;
+    }
+
+    /* Main / Maintenance Hero */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .maintenance-hero {
+      background: var(--colour-band);
+      padding-block: var(--space-9);
+      border-bottom: var(--rule-accent);
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    .maintenance-hero__eyebrow {
+      color: var(--colour-accent);
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .maintenance-hero__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--colour-accent);
+      display: inline-block;
+    }
+
+    .maintenance-hero__title {
+      margin-top: var(--space-4);
+      font-size: var(--text-display);
+      letter-spacing: var(--tracking-display);
+      color: var(--colour-accent);
+      line-height: .95;
+      max-width: 14ch;
+    }
+
+    .maintenance-hero__notice {
+      margin-top: var(--space-7);
+      padding-top: var(--space-6);
+      border-top: var(--rule-thin);
+      max-width: 44rem;
+    }
+
+    .maintenance-hero__actions {
+      margin-top: var(--space-6);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--brand-black);
+      color: var(--brand-white);
+      padding-block: var(--space-8) var(--space-6);
+    }
+
+    .site-footer__intro {
+      font-size: var(--text-sm);
+      font-weight: var(--weight-regular);
+    }
+
+    .site-footer__contact {
+      margin-top: var(--space-5);
+      font-size: clamp(1.25rem, 1rem + 1.2vw, 1.75rem);
+      font-weight: var(--weight-bold);
+      letter-spacing: var(--tracking-heading);
+      color: var(--brand-sand);
+      line-height: 1.25;
+    }
+
+    .site-footer__contact a {
+      text-underline-offset: .15em;
+      text-decoration-thickness: 2px;
+    }
+
+    .site-footer__meta {
+      margin-top: var(--space-7);
+      font-size: var(--text-xs);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="site-header__home" href="/" aria-label="LSTM Home">
+        <svg class="site-header__logo" xmlns="http://www.w3.org/2000/svg" viewBox="75 87.75 842 323" width="73" height="28" role="img" aria-label="LSTM">
+          <path fill="#790033" d="M630.195 89.047a62 62 0 0 1 12.25 4.332 194.1 194.1 0 0 1 56.043 37.008 168.5 168.5 0 0 1 36.938 50.73 179.8 179.8 0 0 1 13.687 39.54 75.65 75.65 0 0 1 .543 30.507c-17.656 15.895-35.316 31.953-52.972 48.02a182.7 182.7 0 0 0 13.152-64.266 151 151 0 0 0-10.988-59.207 233 233 0 0 0-35.852-59.566 136.7 136.7 0 0 0-22.34-20.965 79 79 0 0 0-10.46-6.133"/>
+          <path fill="#dc002e" d="M660.828 88.863a301.3 301.3 0 0 1 137.11 51.63 393.6 393.6 0 0 1 81.62 73.105 305 305 0 0 1 26.126 36.464 148.5 148.5 0 0 1 10.093 19.133 158536 158536 0 0 0-153.324 95.868c-20.004 12.453-40 24.906-60.004 37.546a397 397 0 0 0 44.504-52.347 244.5 244.5 0 0 0 29.371-53.953 137.3 137.3 0 0 0 8.461-35.961 121.9 121.9 0 0 0-3.414-36.09 174.9 174.9 0 0 0-28.289-64.078 167.3 167.3 0 0 0-43.426-42.422 184.9 184.9 0 0 0-69.738-28.711 22.9 22.9 0 0 0-7.02-1.262 160 160 0 0 1 27.93 1.078"/>
+          <path fill="#000000" d="M469.957 224.004h32.773c20.028 47.945 41.27 95.285 61.297 143.226 20.633-47.94 40.664-95.28 61.903-143.226h31.558c-3.035 7.89-4.246 15.781-4.246 24.277v134.121c0 8.5 1.211 16.996 4.246 24.887h-34.59c3.641-9.105 4.852-18.816 4.247-28.527V265.273c-20.028 47.336-40.665 94.676-60.688 141.407h-6.07c-20.637-47.336-41.27-94.07-61.297-141.407v115.309c.605 8.5.605 17.602 4.246 25.492h-32.77c4.247-9.105 3.641-19.422 4.247-28.523v-88c-.606-16.996.609-34.594-.606-52.196-1.215-4.855-2.43-9.101-4.25-13.351m-55.227-.606c13.957 0 27.918.606 41.27-2.43-1.82 6.071-3.035 12.747-4.855 18.817-1.82 3.64-5.461 5.461-9.711 5.461h-48.551v134.125c0 9.102 1.215 18.207 4.25 26.703H361.93c3.035-9.105 4.855-18.812 4.25-28.523V245.246h-36.414c-9.106 0-18.207 1.82-26.704 4.25 2.426-7.285 4.247-14.566 7.282-21.851 1.82-3.036 5.46-4.856 8.496-4.247Zm-194.812 6.067c13.352-8.496 29.738-9.707 45.516-7.887 7.89.606 15.78 3.031 22.457 6.676 2.425 1.21 4.246 3.64 3.64 6.676-1.82 6.066-3.64 12.136-4.855 18.207-9.106-6.07-19.422-10.32-30.344-10.926-8.5-.606-18.816.605-24.883 7.285-6.676 6.672-6.676 17.598-2.43 25.488 4.856 9.102 12.747 15.778 20.028 21.848 8.496 7.281 18.207 13.352 26.703 20.637 7.89 6.066 14.566 13.351 18.816 22.453 4.856 12.746 4.856 26.703-.609 39.45-6.676 14.562-19.418 24.882-35.2 27.917-16.991 4.246-34.593 3.031-50.98-3.644-4.855-2.426-10.316-4.856-11.527-10.922-.61-7.891.605-16.387.605-24.883 10.317 12.742 25.489 20.027 41.27 20.027 9.102.606 18.207-2.43 25.488-7.89 6.676-5.461 9.711-13.352 9.106-21.848 0-9.711-7.285-17.602-13.961-23.668-16.387-13.352-34.594-24.883-47.945-41.879-7.891-9.102-10.922-21.238-9.711-33.379 1.214-12.137 8.5-23.062 18.816-29.738m-144.441-5.461h34.59c-2.426 6.07-3.641 12.137-4.247 18.812v143.23h50.371c7.891 0 16.387-1.214 23.672-4.25-1.824 7.286-3.035 13.962-4.855 21.243-1.215 4.25-6.676 4.856-10.32 4.25H75.477c2.425-4.25 3.64-9.105 3.64-13.96V241.604c0-6.07-1.215-12.14-3.64-17.601"/>
+        </svg>
+        <span class="eyebrow">Brand toolkit</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="maintenance-hero" role="status" aria-live="polite">
+      <div class="wrap">
+        <p class="eyebrow maintenance-hero__eyebrow">
+          <span class="maintenance-hero__dot" aria-hidden="true"></span>
+          Scheduled maintenance
+        </p>
+        <h1 class="maintenance-hero__title">Temporarily unavailable</h1>
+        <div class="maintenance-hero__notice">
+          <p class="lead">This website is down for maintenance at the moment. Please check back in a few minutes.</p>
+          <div class="maintenance-hero__actions">
+            <button class="button" type="button" onclick="window.location.reload()">Try again</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer inverse">
+    <div class="wrap">
+      <p class="site-footer__intro">Need urgent assistance with brand guidelines or assets?</p>
+      <p class="site-footer__contact">
+        LSTM Marketing Team<br>
+        <a href="mailto:marketing@lstmed.ac.uk">marketing@lstmed.ac.uk</a>
+      </p>
+      <p class="site-footer__meta">&copy; 2026 Liverpool School of Tropical Medicine &middot; <a href="https://lstmed.ac.uk">lstmed.ac.uk</a></p>
+    </div>
+  </footer>
+</body>
+</html>
