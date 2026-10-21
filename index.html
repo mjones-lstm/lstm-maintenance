@@ -160,28 +160,6 @@
       margin-inline: auto;
     }
 
-    .button {
-      align-items: center;
-      gap: var(--space-2);
-      min-height: 44px;
-      padding: var(--space-2) var(--space-5);
-      border-radius: var(--radius-pill);
-      background: var(--colour-accent);
-      color: var(--brand-white);
-      font: inherit;
-      font-size: var(--text-sm);
-      font-weight: var(--weight-bold);
-      cursor: pointer;
-      border: 0;
-      text-decoration: none;
-      display: inline-flex;
-      transition: background-color .15s ease;
-    }
-
-    .button:hover {
-      background: var(--colour-accent-deep);
-    }
-
     /* Header */
     .site-header {
       border-bottom: var(--rule-subtle);
@@ -256,44 +234,6 @@
       border-top: var(--rule-thin);
       max-width: 44rem;
     }
-
-    .maintenance-hero__actions {
-      margin-top: var(--space-6);
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-3);
-    }
-
-    /* Footer */
-    .site-footer {
-      background: var(--brand-black);
-      color: var(--brand-white);
-      padding-block: var(--space-8) var(--space-6);
-    }
-
-    .site-footer__intro {
-      font-size: var(--text-sm);
-      font-weight: var(--weight-regular);
-    }
-
-    .site-footer__contact {
-      margin-top: var(--space-5);
-      font-size: clamp(1.25rem, 1rem + 1.2vw, 1.75rem);
-      font-weight: var(--weight-bold);
-      letter-spacing: var(--tracking-heading);
-      color: var(--brand-sand);
-      line-height: 1.25;
-    }
-
-    .site-footer__contact a {
-      text-underline-offset: .15em;
-      text-decoration-thickness: 2px;
-    }
-
-    .site-footer__meta {
-      margin-top: var(--space-7);
-      font-size: var(--text-xs);
-    }
   </style>
 </head>
 <body>
@@ -305,7 +245,6 @@
           <path fill="#dc002e" d="M660.828 88.863a301.3 301.3 0 0 1 137.11 51.63 393.6 393.6 0 0 1 81.62 73.105 305 305 0 0 1 26.126 36.464 148.5 148.5 0 0 1 10.093 19.133 158536 158536 0 0 0-153.324 95.868c-20.004 12.453-40 24.906-60.004 37.546a397 397 0 0 0 44.504-52.347 244.5 244.5 0 0 0 29.371-53.953 137.3 137.3 0 0 0 8.461-35.961 121.9 121.9 0 0 0-3.414-36.09 174.9 174.9 0 0 0-28.289-64.078 167.3 167.3 0 0 0-43.426-42.422 184.9 184.9 0 0 0-69.738-28.711 22.9 22.9 0 0 0-7.02-1.262 160 160 0 0 1 27.93 1.078"/>
           <path fill="#000000" d="M469.957 224.004h32.773c20.028 47.945 41.27 95.285 61.297 143.226 20.633-47.94 40.664-95.28 61.903-143.226h31.558c-3.035 7.89-4.246 15.781-4.246 24.277v134.121c0 8.5 1.211 16.996 4.246 24.887h-34.59c3.641-9.105 4.852-18.816 4.247-28.527V265.273c-20.028 47.336-40.665 94.676-60.688 141.407h-6.07c-20.637-47.336-41.27-94.07-61.297-141.407v115.309c.605 8.5.605 17.602 4.246 25.492h-32.77c4.247-9.105 3.641-19.422 4.247-28.523v-88c-.606-16.996.609-34.594-.606-52.196-1.215-4.855-2.43-9.101-4.25-13.351m-55.227-.606c13.957 0 27.918.606 41.27-2.43-1.82 6.071-3.035 12.747-4.855 18.817-1.82 3.64-5.461 5.461-9.711 5.461h-48.551v134.125c0 9.102 1.215 18.207 4.25 26.703H361.93c3.035-9.105 4.855-18.812 4.25-28.523V245.246h-36.414c-9.106 0-18.207 1.82-26.704 4.25 2.426-7.285 4.247-14.566 7.282-21.851 1.82-3.036 5.46-4.856 8.496-4.247Zm-194.812 6.067c13.352-8.496 29.738-9.707 45.516-7.887 7.89.606 15.78 3.031 22.457 6.676 2.425 1.21 4.246 3.64 3.64 6.676-1.82 6.066-3.64 12.136-4.855 18.207-9.106-6.07-19.422-10.32-30.344-10.926-8.5-.606-18.816.605-24.883 7.285-6.676 6.672-6.676 17.598-2.43 25.488 4.856 9.102 12.747 15.778 20.028 21.848 8.496 7.281 18.207 13.352 26.703 20.637 7.89 6.066 14.566 13.351 18.816 22.453 4.856 12.746 4.856 26.703-.609 39.45-6.676 14.562-19.418 24.882-35.2 27.917-16.991 4.246-34.593 3.031-50.98-3.644-4.855-2.426-10.316-4.856-11.527-10.922-.61-7.891.605-16.387.605-24.883 10.317 12.742 25.489 20.027 41.27 20.027 9.102.606 18.207-2.43 25.488-7.89 6.676-5.461 9.711-13.352 9.106-21.848 0-9.711-7.285-17.602-13.961-23.668-16.387-13.352-34.594-24.883-47.945-41.879-7.891-9.102-10.922-21.238-9.711-33.379 1.214-12.137 8.5-23.062 18.816-29.738m-144.441-5.461h34.59c-2.426 6.07-3.641 12.137-4.247 18.812v143.23h50.371c7.891 0 16.387-1.214 23.672-4.25-1.824 7.286-3.035 13.962-4.855 21.243-1.215 4.25-6.676 4.856-10.32 4.25H75.477c2.425-4.25 3.64-9.105 3.64-13.96V241.604c0-6.07-1.215-12.14-3.64-17.601"/>
         </svg>
-        <span class="eyebrow">Brand toolkit</span>
       </a>
     </div>
   </header>
@@ -320,23 +259,9 @@
         <h1 class="maintenance-hero__title">Temporarily unavailable</h1>
         <div class="maintenance-hero__notice">
           <p class="lead">This website is down for maintenance at the moment. Please check back in a few minutes.</p>
-          <div class="maintenance-hero__actions">
-            <button class="button" type="button" onclick="window.location.reload()">Try again</button>
-          </div>
         </div>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer inverse">
-    <div class="wrap">
-      <p class="site-footer__intro">Need urgent assistance with brand guidelines or assets?</p>
-      <p class="site-footer__contact">
-        LSTM Marketing Team<br>
-        <a href="mailto:marketing@lstmed.ac.uk">marketing@lstmed.ac.uk</a>
-      </p>
-      <p class="site-footer__meta">&copy; 2026 Liverpool School of Tropical Medicine &middot; <a href="https://lstmed.ac.uk">lstmed.ac.uk</a></p>
-    </div>
-  </footer>
 </body>
 </html>
