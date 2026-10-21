@@ -204,28 +204,12 @@
       align-items: center;
     }
 
-    .maintenance-hero__eyebrow {
-      color: var(--colour-accent);
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-    }
-
-    .maintenance-hero__dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--colour-accent);
-      display: inline-block;
-    }
-
     .maintenance-hero__title {
-      margin-top: var(--space-4);
-      font-size: var(--text-display);
+      font-size: clamp(2.25rem, 1.5rem + 3vw, 4rem);
       letter-spacing: var(--tracking-display);
       color: var(--colour-accent);
-      line-height: .95;
-      max-width: 14ch;
+      line-height: 1.02;
+      max-width: 18ch;
     }
 
     .maintenance-hero__notice {
@@ -252,11 +236,7 @@
   <main id="main">
     <section class="maintenance-hero" role="status" aria-live="polite">
       <div class="wrap">
-        <p class="eyebrow maintenance-hero__eyebrow">
-          <span class="maintenance-hero__dot" aria-hidden="true"></span>
-          Scheduled maintenance
-        </p>
-        <h1 class="maintenance-hero__title">Temporarily unavailable</h1>
+        <h1 class="maintenance-hero__title">This website is temporarily offline</h1>
         <div class="maintenance-hero__notice">
           <p class="lead">This website is down for maintenance at the moment. Please check back in a few minutes.</p>
         </div>
